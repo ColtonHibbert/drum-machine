@@ -55,6 +55,13 @@ class App extends Component {
     console.log('should play');
   }
 
+  playKeys = (event) => {
+    if (event.key === "q" || event.key === "Q") {
+      this.playQ();
+      console.log('should key play q')
+    }
+  }
+
   render() {
     return (
       <div 
@@ -72,6 +79,7 @@ class App extends Component {
           playZ={this.playZ}
           playX={this.playX}
           playC={this.playC}
+          playKeys={this.playKeys}
           />
           <Controls />
         </DrumPad>

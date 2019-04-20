@@ -10,7 +10,7 @@ import PowerUpRay from './PowerUpRay.mp3';
 import RayGun from './RayGun.mp3';
 
 
-const DrumKeys = ({ playQ, playW, playE, playA, playS, playD, playZ, playX, playC }) => {
+const DrumKeys = ({ playQ, playW, playE, playA, playS, playD, playZ, playX, playC, playKeys }) => {
     return (
         <div className="h-100 w-100 flex flex-column items-center pa1
         w-50-l
@@ -21,6 +21,7 @@ const DrumKeys = ({ playQ, playW, playE, playA, playS, playD, playZ, playX, play
                     className="h3 w3 drum-pad bg-light-purple ma1 br2 flex justify-center items-center pointer grow
                     "
                     onClick={playQ}
+                    onKeyDown={(event) => playKeys(event)}
                 >Q
                     <audio
                         id="Q"
