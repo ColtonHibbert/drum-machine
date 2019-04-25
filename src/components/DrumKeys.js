@@ -21,7 +21,6 @@ const DrumKeys = ({ playQ, playW, playE, playA, playS, playD, playZ, playX, play
                     className="h3 w3 drum-pad bg-light-purple ma1 br2 flex justify-center items-center pointer grow
                     "
                     onClick={playQ}
-                    
                 >Q
                     <audio
                         id="Q"
