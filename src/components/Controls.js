@@ -4,14 +4,10 @@ const Controls = (props) => {
     return (
         <div className="w-50 flex flex-column items-center pa2">
             <div 
-                className="ma1"
+                className="ma1 f4 light-purple tc"
                 id="display"
             >
-            display
             </div>
-            <div className="ma1">volume</div>
-            <div className="ma1">bank toggle</div>
-            <div className="ma1">power toggle</div>
         </div>
     );
 }
