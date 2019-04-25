@@ -12,12 +12,14 @@ class App extends Component {
       soundStrings: ["Punch", "Alien Machine Gun", "Atari", "Laser Cannon", "Mario Jump", "Metroid", "PacMan", "Power Up Ray", "Ray Gun"],
     }
     this.playQ = this.playQ.bind(this);
+    this.playKeys = this.playKeys.bind(this);
   }
 
   
   playQ = () => {
     document.getElementById("Q").play();
     console.log('should play');
+
   }
 
   playW = () => {
@@ -56,19 +58,21 @@ class App extends Component {
   }
 
   playKeys = (event) => {
-    if (event.key === "q" || event.key === "Q") {
+    console.log("should run though keydown stuff");
+    if (event.keyCode === 81 || event.key === "Q") {
       this.playQ();
       console.log('should key play q')
     }
   }
-
+  
   render() {
     return (
       <div 
         className="
-        min-vh-100 w-100 bg-light-purple flex flex-column items-center justify-center"
+        min-vh-100 w-100 bg-light-purple flex flex-column items-center justify-center"  
+        onKeyPress={event => alert(event.key)}  
       >
-        <DrumPad>
+        <DrumPad >
           <DrumKeys 
           playQ={this.playQ}
           playW={this.playW}
